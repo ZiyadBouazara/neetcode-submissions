@@ -1,0 +1,20 @@
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        # for i in range(len(nums)):
+        #     for j in range(i+1, len(nums)):
+        #         if nums[i] == nums[j]:
+        #             return True
+        
+        # return False
+
+        hashset = set()
+
+        for i in range(len(nums)):
+            if nums[i] in hashset:
+                return True
+            else:
+                hashset.add(nums[i])
+        
+        return False
+
+            
